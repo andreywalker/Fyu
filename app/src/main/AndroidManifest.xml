@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.fyu">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <application
+        android:icon="@drawable/ikon"
+        android:label="fuy"
+        android:roundIcon="@drawable/ikon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+        android:keepScreenOn="true">
+
+        <activity android:name="com.example.fyu.StoryActivity"
+            android:screenOrientation="userLandscape"
+            tools:ignore="LockedOrientationActivity"/>
+
+
+        <service
+            android:name="com.example.fyu.PlayerService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity
+            android:name="com.example.fyu.GameActivity"
+            android:screenOrientation="userLandscape"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.example.fyu.PlaceActivity"
+            android:screenOrientation="userLandscape"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.example.fyu.SettingsActivity"
+            android:screenOrientation="userLandscape"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.example.fyu.MainActivity"
+            android:screenOrientation="userLandscape"
+            tools:ignore="LockedOrientationActivity"
+            android:keepScreenOn="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
